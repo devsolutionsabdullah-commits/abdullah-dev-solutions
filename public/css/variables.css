@@ -1,0 +1,50 @@
+/* =====================================================
+   variables.css — Design Tokens & Theme
+===================================================== */
+
+:root {
+  /* Backgrounds */
+  --bg:        #070b14;
+  --bg-soft:   #0c1322;
+  --panel:     #101a30;
+  --panel-2:   #0e1626;
+
+  /* Borders */
+  --line:        rgba(148, 178, 255, 0.12);
+  --line-strong: rgba(148, 178, 255, 0.22);
+
+  /* Text */
+  --text:    #e7ecf7;
+  --muted:   #8b9ab3;
+  --muted-2: #5f7090;
+
+  /* Brand Colors */
+  --cyan:   #3fd0ff;
+  --violet: #8b7bff;
+
+  /* Gradients */
+  --grad:      linear-gradient(135deg, #3fd0ff 0%, #8b7bff 100%);
+  --grad-soft: linear-gradient(135deg, rgba(63,208,255,0.16), rgba(139,123,255,0.16));
+
+  /* Shadows & Shape */
+  --shadow: 0 20px 60px -20px rgba(0, 0, 0, 0.6);
+  --radius: 18px;
+
+  /* Fonts */
+  --mono: 'JetBrains Mono', monospace;
+  --sans: 'Inter', sans-serif;
+}
+
+/* Light Mode Overrides */
+[data-theme="light"] {
+  --bg:          #f3f5fb;
+  --bg-soft:     #ffffff;
+  --panel:       #ffffff;
+  --panel-2:     #eef1fa;
+  --line:        rgba(20, 30, 60, 0.08);
+  --line-strong: rgba(20, 30, 60, 0.14);
+  --text:        #0f1729;
+  --muted:       #5b6781;
+  --muted-2:     #8893ab;
+  --shadow:      0 20px 60px -25px rgba(40, 60, 120, 0.25);
+}
