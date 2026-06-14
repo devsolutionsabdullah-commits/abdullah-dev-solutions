@@ -12,7 +12,6 @@
     gap: 50px;
   }
 
-  /* Flip about so visual comes second on tablet */
   .about-grid {
     grid-template-columns: 1fr;
     gap: 50px;
@@ -66,30 +65,35 @@
 
   .hero { padding-top: 120px; }
 
-  .services-grid { grid-template-columns: 1fr; }
-  .projects-grid { grid-template-columns: 1fr; }
-  .process-grid  { grid-template-columns: 1fr; }
+  /* 2 columns on mobile */
+  .services-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .process-grid  { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .testi-grid    { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .icon-cloud    { grid-template-columns: repeat(3, 1fr); gap: 10px; }
 
-  .form-row { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr 1fr; gap: 12px; }
 
   .footer-grid  { flex-direction: column; }
   .footer-links { gap: 30px; }
 
-  .icon-cloud { grid-template-columns: repeat(3, 1fr); }
-
   .hero-stats { gap: 24px; }
 
-  .about-meta { grid-template-columns: 1fr; }
+  .about-meta { grid-template-columns: repeat(2, 1fr); }
 
-  .quick-actions { flex-direction: column; }
-  .quick-actions .btn { justify-content: center; }
+  .quick-actions { flex-direction: row; flex-wrap: wrap; }
+  .quick-actions .btn { justify-content: center; flex: 1; }
 }
 
 /* ---- SMALL MOBILE (≤ 420px) ---- */
 @media (max-width: 420px) {
-  .container { padding: 0 16px; }
-  .hero h1   { font-size: 2.2rem; }
-  .code-window-body { padding: 16px; }
-  .icon-cloud { grid-template-columns: repeat(3, 1fr); gap: 10px; }
-  .contact-form { padding: 24px 18px; }
+  .container { padding: 0 12px; }
+  .hero h1   { font-size: 1.9rem; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .process-grid  { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .testi-grid    { grid-template-columns: 1fr; }
+  .icon-cloud    { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .contact-form  { padding: 24px 18px; }
+  .form-row      { grid-template-columns: 1fr; }
 }
